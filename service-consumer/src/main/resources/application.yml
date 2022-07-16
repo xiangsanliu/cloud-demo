@@ -1,0 +1,19 @@
+server:
+  port: 9001
+feign:
+  hystrix:
+    enabled: true
+
+spring:
+  application:
+    name: spring-cloud-consumer
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+logging:
+  level:
+    top.xiangsanliu.serviceconsumer.HelloRemote: DEBUG
+  file:
+    name: consumer.log
