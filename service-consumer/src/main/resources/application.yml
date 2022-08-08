@@ -3,6 +3,10 @@ server:
 feign:
   hystrix:
     enabled: true
+  client:
+    config:
+      default:
+        logger-level: basic
 
 spring:
   application:
@@ -14,6 +18,6 @@ eureka:
       defaultZone: http://localhost:8000/eureka/
 logging:
   level:
-    top.xiangsanliu.serviceconsumer.HelloRemote: DEBUG
+    top.xiangsanliu.serviceconsumer: DEBUG
   file:
     name: consumer.log
